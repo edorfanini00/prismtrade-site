@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celeritech Hermes Alerts – SMS Program &amp; Opt-In</title>
+<meta name="description" content="Opt in to Celeritech Hermes Alerts, an SMS program delivering operational alerts and replies from the Celeritech Hermes assistant to Celeritech staff.">
+<link rel="stylesheet" href="/sms/sms.css">
+</head>
+<body>
+<header>
+  <div><a class="brand" href="/sms/">Celeritech Hermes Alerts</a><div class="eyebrow">SMS program · Celeritech International Corp</div></div>
+  <nav><a href="/sms/" aria-current="page">Program &amp; Opt-In</a><a href="/sms/privacy/">Privacy Policy</a><a href="/sms/terms/">Terms</a></nav>
+</header>
+
+<main>
+  <p class="eyebrow">SMS program</p>
+  <h1>Celeritech Hermes Alerts</h1>
+  <p class="lead">Operational text-message alerts and replies from the Celeritech Hermes assistant, for Celeritech staff who ask for them.</p>
+
+  <h2>About this program</h2>
+  <p><strong>Celeritech Hermes Alerts</strong> is operated by Celeritech International Corp. It is intended solely for <strong>Celeritech staff members</strong> who request text alerts from the Celeritech Hermes assistant, an internal operations assistant.</p>
+  <p>Messages are <strong>operational alerts</strong> — task and status updates, reminders, and system notices — and <strong>replies to the staff member's own text requests</strong>. Volume is low. This program sends <strong>no marketing, no promotions, no lending offers, and no age-restricted content</strong>.</p>
+  <p>Messages are sent from <strong>+1 360 300 5673</strong>.</p>
+
+  <h2 id="enroll">Enroll on the web (Step 1 of 2)</h2>
+  <div class="card">
+    <form id="optin-form" action="#" onsubmit="return false;" novalidate>
+      <label for="fullname">Full name</label>
+      <input type="text" id="fullname" name="fullname" autocomplete="name" required>
+
+      <label for="mobile">Mobile number</label>
+      <input type="tel" id="mobile" name="mobile" autocomplete="tel" placeholder="+1 555 555 5555" required>
+
+      <label class="consent" for="consent">
+        <input type="checkbox" id="consent" name="consent" value="yes">
+        <span>I agree to receive operational alert and reply text messages from Celeritech International Corp (Celeritech Hermes Alerts) at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase or employment.</span>
+      </label>
+
+      <button type="submit" id="submit-btn" disabled>Continue to Step 2</button>
+      <p class="small" style="margin-top:12px">The submit button stays disabled until you check the consent box. <strong>No data is transmitted by this form</strong> — nothing you type here is sent or stored anywhere; enrollment is completed by texting START from your phone in Step 2.</p>
+    </form>
+
+    <div id="confirm-panel" class="card confirm hidden" role="status" aria-live="polite">
+      <h3>Step 2: from that mobile number, text START to +1 360 300 5673 to complete enrollment. You will receive a confirmation text.</h3>
+      <p><a class="btn" href="sms:+13603005673?&amp;body=START">Text START now</a></p>
+      <p class="small">If the button does not open your messaging app, open it manually and send the word <strong>START</strong> to <strong>+1 360 300 5673</strong>.</p>
+    </div>
+  </div>
+
+  <div class="disclosure">
+    <p><strong>Disclosures.</strong> Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help, or email <a href="mailto:info@celeritech.biz">info@celeritech.biz</a>. Consent is not a condition of purchase or employment.</p>
+    <p>Your mobile information and SMS consent will not be shared with or sold to third parties or affiliates for marketing or promotional purposes. See our <a href="/sms/privacy/">SMS Privacy Policy</a> and <a href="/sms/terms/">SMS Terms &amp; Conditions</a>.</p>
+  </div>
+
+  <h2 id="text">Enroll by text</h2>
+  <p>You can also enroll directly from your phone without using the form above: text the keyword <strong>START</strong> to <strong>+1 360 300 5673</strong>. By texting START you consent to receive operational alert and reply text messages from Celeritech International Corp (Celeritech Hermes Alerts) at that number.</p>
+  <p>You will receive this confirmation message:</p>
+  <code class="mono">Celeritech Hermes Alerts: You are now subscribed to operational alerts and replies from the Celeritech Hermes assistant. Msg frequency varies. Msg & data rates may apply. Reply HELP for help, STOP to cancel. Privacy: https://helios.prismtrade.co/sms/privacy/</code>
+  <p style="margin-top:16px">Message frequency varies. Message and data rates may apply. Reply STOP to cancel or HELP for help at any time.</p>
+
+  <h2>Opting out and getting help</h2>
+  <ul>
+    <li>Reply <strong>STOP</strong> (or CANCEL, QUIT, END, UNSUBSCRIBE) to +1 360 300 5673 to stop receiving messages. You will receive one final confirmation text and no further messages.</li>
+    <li>Reply <strong>HELP</strong> for program information, or email <a href="mailto:info@celeritech.biz">info@celeritech.biz</a>.</li>
+  </ul>
+
+  <h2>Program owner</h2>
+  <div class="card">
+    <address>
+      <strong>Celeritech International Corp</strong><br>
+      1200 Brickell Avenue, Suite 310<br>
+      Miami, FL 33131<br>
+      Email: <a href="mailto:info@celeritech.biz">info@celeritech.biz</a><br>
+      Website: <a href="https://celeritech.biz">https://celeritech.biz</a><br>
+      SMS number: +1 360 300 5673
+    </address>
+  </div>
+</main>
+
+<footer>
+  <a href="/sms/">Program &amp; Opt-In</a> · <a href="/sms/privacy/">Privacy Policy</a> · <a href="/sms/terms/">Terms &amp; Conditions</a><br>
+  © 2026 Celeritech International Corp
+</footer>
+
+<script>
+(function () {
+  var box = document.getElementById('consent');
+  var btn = document.getElementById('submit-btn');
+  var form = document.getElementById('optin-form');
+  var panel = document.getElementById('confirm-panel');
+  box.checked = false;
+  btn.disabled = true;
+  box.addEventListener('change', function () { btn.disabled = !box.checked; });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!box.checked) { return false; }
+    panel.classList.remove('hidden');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    return false;
+  });
+})();
+</script>
+</body>
+</html>
